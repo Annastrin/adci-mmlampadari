@@ -1,12 +1,23 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
 }
 
+/* HEADER */
+
 .header {
     background-color: #353436;
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;            
+    color: #fff;        
+    position: fixed;    
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 100;   
 }
 
 .header .container {
@@ -15,10 +26,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.logo {
-    margin: 24px 0;
+    padding: 24px 0;
 }
 
 .authorization {
@@ -36,14 +44,15 @@
 .nav {
     display: flex;
     flex-direction: row;
-    margin-top: 90px;    
+    align-items: flex-end;        
 }
 
 .nav a {
     text-decoration: none;
     color: #fff;   
     font-size: 18px; 
-    margin-right: 25px;
+    margin-left: 17px;
+    margin-right: 9px;
 }
 
 .nav a:last-child {
@@ -54,6 +63,7 @@
 .nav a:active,
 .nav a:focus {
     color: #e2d1a6;
+    font-weight: bold;
 }
 
 .dropdown {
@@ -66,8 +76,8 @@
     z-index: 1;
     background-color: #353436; 
     box-sizing: border-box; 
-    width: 150px;  
-    margin-top: 24px;
+    width: 150px; 
+    padding-top: 30px;    
 }
 
 .dropdown:hover .dropdown-content {
@@ -76,7 +86,101 @@
 
 .dropdown-content a {
     display: block;
-    font-size: 16px;
-    margin: 8px;
+    font-size: 16px;    
     border-bottom: 1px solid #fff;
+    padding: 7px 8px;
+    margin-left: 9px;
+    margin-right: 8px;
+}
+
+.dropdown-content a:last-child {
+    border: none;
+    padding-bottom: 15px;
+}
+
+/* MAIN */
+
+.main {
+    width: 100%;
+    background-image: url('file:///C:/Projects/adci-mmlampadari/img/main-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #353436;
+    min-height: 769px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.about {
+    background-color: rgba(255, 255, 255, 0.85);
+    float: right;
+    margin-top: 349px;
+    box-sizing: border-box;
+    width: 510px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.about h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+.about p {
+    padding-left: 5px;
+    padding-right: 20px;
+}
+
+.buttons {
+    width: 84px;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    margin-left: -42px;
+}
+
+.slider-buttons {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active, .dot:hover {
+    background-color: #e2d1a6;
+}
+
+.show-button {    
+    width: 84px;
+    height: 28px;
+    background-color: #fff;
+    background-image: url('file:///C:/Projects/adci-mmlampadari/img/arrow-up.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* FOOTER */
+
+.footer {
+    height: 273px;
+    background-color: #353436;
 }

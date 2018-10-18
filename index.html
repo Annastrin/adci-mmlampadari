@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>mmlampadari</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
@@ -39,7 +40,20 @@
         </div>
     </header>
     <main class="main">
-        <div class="container"></div>
+        <div class="about">
+            <h1>Lampadari contemporanei</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+        </div>        
+        <div class="container">
+            <div class="buttons">
+                <div class="slider-buttons">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot active" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                <button class="show-button"></button>
+            </div>            
+        </div>
     </main>
     <footer class="footer">
         <div class="container"></div>
