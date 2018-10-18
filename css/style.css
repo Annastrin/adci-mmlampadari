@@ -102,7 +102,7 @@ body {
 
 .main {
     width: 100%;
-    background-image: url('file:///C:/Projects/adci-mmlampadari/img/main-img.jpg');
+    background-image: url('../img/main-img.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
