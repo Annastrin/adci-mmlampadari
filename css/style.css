@@ -1,0 +1,82 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #353436;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;            
+}
+
+.header .container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 24px 0;
+}
+
+.authorization {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.authorization svg {
+    margin-left: 8px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 90px;    
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;   
+    font-size: 18px; 
+    margin-right: 25px;
+}
+
+.nav a:last-child {
+    margin-right: 0;
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a:focus {
+    color: #e2d1a6;
+}
+
+.dropdown {
+    overflow: hidden;
+}
+
+.dropdown-content {    
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #353436; 
+    box-sizing: border-box; 
+    width: 150px;  
+    margin-top: 24px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    font-size: 16px;
+    margin: 8px;
+    border-bottom: 1px solid #fff;
+}
