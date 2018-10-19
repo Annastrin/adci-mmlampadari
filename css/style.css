@@ -1,7 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    
+    font-size: 16px;    
 }
 
 .container {
@@ -181,10 +184,6 @@ body {
 
 .articles {
     display: none;
-    /*
-    flex-direction: row;
-    justify-content: center;
-    */
     position: absolute;
     bottom: 0;
 }
@@ -256,9 +255,128 @@ body {
 .article-2 a {
     color: #000;
 }
+
 /* FOOTER */
 
 .footer {
-    height: 273px;
+    min-height: 273px;
     background-color: #353436;
+    color: #fff;
+    position: relative;
 }
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.footer-top__section {
+    width: 190px;
+    margin: 0 30px;
+}
+
+.footer-top__section h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.footer-top__section p {
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-right: 8px;
+    line-height: 1.454;
+}
+
+.newsletter-form {
+    margin-top: 20px;    
+}
+
+.newsletter-form input[type=text],
+.newsletter-form input[type=email] {
+    width: 185px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 8px 5px;
+    border: none;
+}
+
+.newsletter-form input[type=submit] {
+    width: 185px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    padding: 7px 0;
+}
+
+.newsletter-form input[type=submit]:hover,
+.newsletter-form input[type=submit]:focus,
+.newsletter-form input[type=submit]:active {
+    background-color: #e2d1a6;
+    color: #fff;
+}
+
+.newsletter-form input[type=checkbox] {
+    width: 8px;
+    height: 8px;   
+    border: none;
+    outline: none;
+    background-color: #fff; 
+    margin-bottom: 10px;
+}
+
+.newsletter-form label {
+    font-size: 10px;
+    vertical-align: middle;
+    color: rgb(181, 180, 180);
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+
+.contacts {
+    margin-right: 70px;
+}
+
+.contacts span {
+    margin-right: 15px;
+    font-size: 12px;
+}
+
+.contacts span:last-child {
+    margin-right: 0;
+}
+
+.social a {
+    margin: 0 4px;
+}
+
+.languages a {    
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.languages a:hover,
+.languages a:focus,
+.languages a:active {
+    text-decoration: underline;
+}
+  
