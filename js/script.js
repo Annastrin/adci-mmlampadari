@@ -14,6 +14,7 @@ $(document).ready(function(){
         prevSlider = '#' + event.target.id;
     });
 
+
     $(".hide-button").click(function(){
         $(".articles").slideUp(200);
     });
@@ -21,4 +22,18 @@ $(document).ready(function(){
     $(".show-button").click(function(){
         $(".articles").slideDown(200);
     });
+
+
+    $(".authentication").click(function(){
+        $(".authentication-window").css("display", "block");
+    });
+
+
+    $("#close").click(function(){
+        $(".authentication-window").css("display", "none");
+    });
+    
+    // TODO close the modal window, when click outside the modal window
+    // https://stackoverflow.com/questions/9538868/prevent-body-from-scrolling-when-a-modal-is-opened
+    
 });
