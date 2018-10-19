@@ -13,4 +13,12 @@ $(document).ready(function(){
         $(event.target).addClass("active");
         prevSlider = '#' + event.target.id;
     });
+
+    $(".hide-button").click(function(){
+        $(".articles").slideUp(200);
+    });
+
+    $(".show-button").click(function(){
+        $(".articles").slideDown(200);
+    });
 });
