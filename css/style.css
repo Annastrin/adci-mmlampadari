@@ -12,7 +12,7 @@ body.modal-open {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -61,7 +61,7 @@ body.modal-open {
     height: 22px;
     background-image: url('../img/close-modal.png');
     background-repeat: no-repeat;
-    background-position: central;
+    background-position: center;
     background-color: transparent;
     border: none;
     outline: none;
@@ -98,6 +98,7 @@ body.modal-open {
 }
 
 .auth-forms input:not([type=checkbox]) {
+    box-sizing: border-box;
     width: 184px;
     border: none;
     font-family: 'Open Sans', sans-serif;
@@ -159,7 +160,8 @@ body.modal-open {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 24px 0;
+    padding-top: 24px;
+    padding-bottom: 20px;
 }  
 
 .nav {
@@ -168,22 +170,24 @@ body.modal-open {
     align-items: flex-end;        
 }
 
-.nav a {
+.nav a {    
     text-decoration: none;
     color: #fff;   
     font-size: 18px; 
-    margin-left: 17px;
-    margin-right: 9px;
-}
+    margin-left: 15px;
+    margin-right: 9px;        
+}  
 
 .nav a:last-child {
     margin-right: 0;
 }
 
 .nav a:hover,
-.nav a:active {
+.nav a:active,
+.nav a.active {
     color: #e2d1a6;
-    font-weight: bold;
+    text-shadow: 0 0 3px #e2d1a6;
+    /* font-weight: bold;*/
 }
 
 .dropdown {
@@ -191,13 +195,13 @@ body.modal-open {
 }
 
 .dropdown-content {    
-    display: none;
+    display: block;
     position: absolute;
     z-index: 1;
     background-color: #353436; 
     box-sizing: border-box; 
     width: 150px; 
-    padding-top: 30px;    
+    padding-top: 25px;    
 }
 
 .dropdown:hover .dropdown-content {
@@ -206,15 +210,17 @@ body.modal-open {
 
 .dropdown-content a {
     display: block;
-    font-size: 16px;    
-    border-bottom: 1px solid #fff;
-    padding: 7px 8px;
+    font-size: 16px;      
+    padding: 5px 8px;
     margin-left: 9px;
     margin-right: 8px;
 }
 
-.dropdown-content a:last-child {
-    border: none;
+.dropdown-content a:not(:last-child) {    
+    border-bottom: 1px solid #fff;
+}
+
+.dropdown-content a:last-child {    
     padding-bottom: 15px;
 }
 
@@ -222,38 +228,48 @@ body.modal-open {
 
 .main {
     width: 100%;
-    background-image: url('../img/main-img.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -100px;
+    background-image: url('../img/main-img-full.jpg');
+    background-repeat: no-repeat;    
+    background-position: center -98px;   
     background-color: #353436;
-    min-height: 670px;   
+    background-size: auto;
+    min-height: 670px;      
+}
+
+.main .container {
     position: relative;
+    min-height: 670px;  
 }
 
 .about {
     background-color: rgba(255, 255, 255, 0.85);
     float: right;
-    margin-top: 280px;
-    box-sizing: border-box;
-    width: 510px;
-    padding-left: 25px;
-    padding-right: 25px;
+    min-width: 510px;
+    margin-top: 250px;             
 }
 
-.about h1 {
+.about__content {
+    box-sizing: border-box;
+    width: 490px;
+    padding-left: 20px;
+}
+
+.about__content h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-style: italic;
     font-size: 30px;
     text-transform: uppercase;
-    margin-bottom: 27px;
-}
+    margin-bottom: 20px;
+}  
 
-.about p {
+.about__content p {
+    box-sizing: border-box;
+    font-size: 18px;
     padding-left: 5px;
     padding-right: 20px;
-}
+    line-height: 1.333;
+}  
 
 .buttons {
     width: 84px;
@@ -297,12 +313,6 @@ body.modal-open {
     padding: 0;
 }
 
-.articles {
-    display: none;
-    position: absolute;
-    bottom: 0;
-}
-
 .hide-button {
     width: 88px;
     height: 29px;
@@ -320,13 +330,25 @@ body.modal-open {
     cursor: pointer;
 }
 
+.articles-block {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+}
+
 .article {
-    width: 400px;
     box-sizing: border-box;
+    width: 33%;    
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 10px;    
-    float: left;
+    padding-bottom: 10px;     
 }
 
 .article-1 {
@@ -342,13 +364,20 @@ body.modal-open {
     color: #fff;
 }
 
-.article h1 {
+.article h2 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     font-weight: 700;
     display: block;
-    height: 64px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    min-height: 64px;
 }
+
+.article p {
+    margin-top: 0;
+    line-height: 1.562;
+}  
 
 .article a {
     float: right;
@@ -375,8 +404,13 @@ body.modal-open {
 .footer {
     min-height: 273px;
     background-color: #353436;
-    color: #fff;
-    position: relative;
+    color: #fff;    
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
 
 .footer-top {
@@ -384,9 +418,11 @@ body.modal-open {
     flex-direction: row;
     justify-content: center;
     padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .footer-top__section {
+    box-sizing: border-box;
     width: 190px;
     margin: 0 30px;
 }
@@ -413,6 +449,7 @@ body.modal-open {
 
 .newsletter-form input[type=text],
 .newsletter-form input[type=email] {
+    box-sizing: border-box;
     width: 184px;
     margin-bottom: 10px;
     font-weight: 300;
@@ -422,6 +459,7 @@ body.modal-open {
 }
 
 .newsletter-form input[type=submit] {
+    box-sizing: border-box;
     width: 184px;
     margin-bottom: 10px;
     font-weight: 300;
@@ -441,6 +479,7 @@ body.modal-open {
 }
 
 .newsletter-form input[type=checkbox] {
+    box-sizing: border-box;
     width: 10px;
     height: 10px;   
     border: none;
@@ -455,9 +494,8 @@ body.modal-open {
     color: rgb(181, 180, 180);
 }
 
-.footer-bottom {
-    position: absolute;
-    bottom: 0;
+.footer-bottom {    
+    box-sizing: border-box;
     padding-bottom: 15px;
     width: inherit;
     display: flex;
@@ -491,5 +529,40 @@ body.modal-open {
 .languages a:hover,
 .languages a:active {
     text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 1230px) {
+    .container {
+        margin: 0 20px;
+    }
+    .footer-bottom {
+        flex-direction: column;        
+    }
+    .contacts,
+    .social,
+    .languages {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .footer-top,
+    .footer-bottom {
+        flex-direction: column;        
+    }
+
+    .footer-top__section {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .contacts,
+    .social,
+    .languages {
+        margin-bottom: 20px;
+    }
 }
   
