@@ -6,7 +6,9 @@ let sliderImages = {
 
 let prevSlider = '#dot2';
 
-$(document).ready(function(){     
+$(document).ready(function(){ 
+    
+    /* Slide main images */
     $(".dot").click(function(event){        
         $(prevSlider).removeClass("active");
         $(".main").css("background-image", sliderImages[event.target.id]);
@@ -15,6 +17,7 @@ $(document).ready(function(){
     });
 
 
+    /* Hide and show articles at the bottom of the main */
     $(".hide-button").click(function(){
         $(".articles").slideUp(200);
     });
@@ -24,16 +27,26 @@ $(document).ready(function(){
     });
 
 
-    $(".authentication").click(function(){
-        $(".authentication-window").css("display", "block");
+    /* Open and close the modal window with authentication */
+    $(".auth-area").click(function(){
+        $(".auth-window").addClass("active");
+        $("body").addClass("modal-open");
     });
 
+    let closeModal = () => {
+        $(".auth-window").removeClass("active");
+        $("body").removeClass("modal-open");
+    }
 
-    $("#close").click(function(){
-        $(".authentication-window").css("display", "none");
-    });
-    
-    // TODO close the modal window, when click outside the modal window
-    // https://stackoverflow.com/questions/9538868/prevent-body-from-scrolling-when-a-modal-is-opened
+    $("#close-modal").click(function(){
+        closeModal();
+    });   
+
+    $(window).click(function(event){        
+        let modal = $(".auth-window");
+        if (event.target == modal[0]) {
+            closeModal();
+        }      
+    });  
     
 });

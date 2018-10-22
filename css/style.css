@@ -7,29 +7,18 @@ body {
     font-size: 16px;    
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
 }
 
-/* HEADER */
 
-.header {
-    background-color: #353436;
-    color: #fff;   
-    width: 100%; 
-}
-
-.header .container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 24px 0;
-}
-
-.authentication {
+/* MODAL WINDOW */
+.auth-area {
     position: absolute;
     top: 5px;
     right: 0;
@@ -37,23 +26,34 @@ body {
     cursor: pointer;
 }
 
-.authentication  svg {
+.auth-area  svg {
     margin-left: 8px;
 }
 
-.authentication-window {
-    width: 596px;
-    height: 360px;
-    background-color: #353436;
-    position: absolute;
-    top: 260px;
-    left: 50%;
-    margin-left: -298px;
+.auth-window {    
+    position: absolute;        
+    width: 100%;
+    height: 100%;
+    padding-top: 260px;
     display: none;
     z-index: 100;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-.close {
+.auth-window.active {
+    display: block;
+}
+
+.auth-window__content {
+    background-color: #353436;
+    width: 596px;
+    min-height: 360px;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: relative;
+}
+
+.close-modal {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -68,12 +68,14 @@ body {
     cursor: pointer;
 }
 
-.authentication-window h2 {
+.auth-window__content h2 {
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 24px;
-    margin: 10px 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 .auth-forms {
@@ -92,6 +94,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 18px;
+    color: #fff;
 }
 
 .auth-forms input:not([type=checkbox]) {
@@ -125,6 +128,11 @@ body {
     color: rgb(181, 180, 180);
 }
 
+.sign-in a:hover, 
+.sign-in a:active {
+    text-decoration: underline;
+}
+
 .sign-up input[type=checkbox] {
     width: 10px;
     height: 10px;
@@ -135,6 +143,23 @@ body {
     font-size: 10px;
     color: rgb(181, 180, 180);
     vertical-align: middle;
+}
+
+/* HEADER */
+
+.header {
+    background-color: #353436;
+    color: #fff;   
+    width: 100%; 
+}
+
+.header .container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px 0;
 }  
 
 .nav {
@@ -156,8 +181,7 @@ body {
 }
 
 .nav a:hover,
-.nav a:active,
-.nav a:focus {
+.nav a:active {
     color: #e2d1a6;
     font-weight: bold;
 }
@@ -203,14 +227,14 @@ body {
     background-size: cover;
     background-position: center -100px;
     background-color: #353436;
-    min-height: 769px;   
+    min-height: 670px;   
     position: relative;
 }
 
 .about {
     background-color: rgba(255, 255, 255, 0.85);
     float: right;
-    margin-top: 349px;
+    margin-top: 280px;
     box-sizing: border-box;
     width: 510px;
     padding-left: 25px;
@@ -333,7 +357,6 @@ body {
 }
 
 .article a:hover, 
-.article a:focus,
 .article a:active {
     text-decoration: underline;
 }
@@ -466,7 +489,6 @@ body {
 }
 
 .languages a:hover,
-.languages a:focus,
 .languages a:active {
     text-decoration: underline;
 }
