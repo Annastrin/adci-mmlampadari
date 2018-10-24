@@ -229,6 +229,7 @@ body.modal-open {
 
 .main {
     width: 100%;
+    display: block;
     background-image: url('../img/main-img-full.jpg');
     background-repeat: no-repeat;    
     background-position: center -98px;   
