@@ -240,20 +240,21 @@ body.modal-open {
     position: relative;
     min-height: 670px;  
 }
-/*
+
 .about {
     background-color: rgba(255, 255, 255, 0.85);    
-    float: right;
-    min-width: 510px;
+    float: right;    
     margin-top: 250px;             
 }
 
 .about__content {    
     box-sizing: border-box;
-    width: 490px;
+    max-width: 510px;
     padding-left: 20px;
+    padding-right: calc((100vw - 1200px)/2);
 }
-*/
+
+/*
 .about {    
     display: flex;
     justify-content: flex-end;    
@@ -266,7 +267,7 @@ body.modal-open {
     width: 490px;
     padding-left: 20px;
 }
-
+*/
 .about__content h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -524,12 +525,12 @@ body.modal-open {
 }
 
 .contacts {
-    margin-right: 70px;
+    margin-right: 90px;
     color: #cccccd;
 }
 
 .contacts span {
-    margin-right: 15px;
+    margin-right: 10px;
     font-size: 12px;
 }
 
