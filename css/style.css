@@ -196,7 +196,7 @@ body.modal-open {
 }
 
 .dropdown-content {    
-    display: block;
+    display: none;
     position: absolute;
     z-index: 1;
     background-color: #353436; 
@@ -255,20 +255,6 @@ body.modal-open {
     padding-right: calc((100vw - 1200px)/2);
 }
 
-/*
-.about {    
-    display: flex;
-    justify-content: flex-end;    
-    padding-top: 250px;             
-}
-
-.about__content {
-    background-color: rgba(255, 255, 255, 0.85);
-    box-sizing: border-box;
-    width: 490px;
-    padding-left: 20px;
-}
-*/
 .about__content h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -290,8 +276,9 @@ body.modal-open {
 
 .buttons {
     width: 84px;
-    position: absolute;
-    bottom: -3px;
+    height: 54px;
+    position: absolute;    
+    bottom: 0px;        
     left: 50%;
     margin-left: -42px;
 }
@@ -299,6 +286,7 @@ body.modal-open {
 .slider-buttons {
     text-align: center;
     margin-bottom: 8px;
+    height: 18px;
 }
 
 .dot {
@@ -352,17 +340,19 @@ body.modal-open {
     position: absolute;
     bottom: 0;
     left: 0;
+    max-width: 1200px; 
 }
 
 .articles {
     display: flex;
     flex-direction: row;
-    justify-content: center;    
+    justify-content: center; 
+    max-width: 1200px;   
 }
 
 .article {
     box-sizing: border-box;
-    width: 33.3%;    
+    width: 33.3%;      
     padding-left: 15px;
     padding-right: 20px;
     padding-bottom: 10px;     
@@ -584,8 +574,12 @@ body.modal-open {
         flex-direction: column;
         align-items: center;
     }
+    .nav a, 
+    .dropdown {
+        margin-bottom: 10px;
+    }
     .dropdown-content {
-        padding-top: 0;
+        padding-top: 10px;
     }
 
     .articles {
@@ -612,5 +606,19 @@ body.modal-open {
     .languages {
         margin-bottom: 20px;
     }
+
+    .about__content h1 {
+        font-size: 26px;
+    }
+
+    .article h2 {
+        font-size: 24px;
+    }
+}
+
+@-moz-document url-prefix()
+{
+    .buttons { bottom: 1px }
+    .about__content { padding-right: calc((100vw - 1200px)/2 - 8.5px); }
 }
   

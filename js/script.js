@@ -33,7 +33,7 @@ $(document).ready(function(){
         $("body").addClass("modal-open");
     });
 
-    let closeModal = () => {
+    var closeModal = function() {
         $(".auth-window").removeClass("active");
         $("body").removeClass("modal-open");
     }
