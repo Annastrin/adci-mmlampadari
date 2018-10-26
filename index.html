@@ -34,11 +34,14 @@
                     <input type="email" name="email" placeholder="E-mail" required>
                     <input type="password" name="password" placeholder="Password" required>
                     <div class="checkbox-group">
-                        <input type="checkbox" name="reg-agreement" id="reg-agreement" required>
-                        <label for="reg-agreement">Acconsento al trattamento dei dati</label>
-                        <br>                        
-                        <input type="checkbox" name="subscription" id="subscription">
-                        <label for="subscription">Mi iscriva alla Newsletter</label>
+                        <div class="checkbox-and-label">
+                            <input type="checkbox" name="reg-agreement" id="reg-agreement" required>
+                            <label for="reg-agreement">Acconsento al trattamento dei dati</label>
+                        </div>
+                        <div class="checkbox-and-label">                        
+                            <input type="checkbox" name="subscription" id="subscription">
+                            <label for="subscription">Mi iscriva alla Newsletter</label>
+                        </div>
                     </div>         
                     <input type="submit" value="ISCRIVITI">
                 </form>
@@ -139,7 +142,7 @@
                     <form class="newsletter-form" action="#">
                         <input type="text" name="name" placeholder="Nome e Cognome" required>
                         <input type="email" name="email" placeholder="Email" required>                        
-                        <div class="checkbox-and-label">
+                        <div class="newsletter-form__checkbox-and-label">
                             <input type="checkbox" name="subscr-agreement" id="subscr-agreement" required>
                             <label for="subscr-agreement">Acconsento al trattamento dei dati</label>
                         </div>                        
@@ -162,9 +165,9 @@
                     <a href="#"><img src="./img/social-pinterest.png" alt="pinterest" width="13" height="18" title="pinterest"></a>
                 </div>
                 <div class="languages">
-                    <a href="#">ITA</a> |
-                    <a href="#">ENG</a> |
-                    <a href="#">DEU</a> |
+                    <a href="#">ITA</a>&#124; 
+                    <a href="#">ENG</a>&#124; 
+                    <a href="#">DEU</a>&#124; 
                     <a href="#">РУС</a>
                 </div>
             </div>
