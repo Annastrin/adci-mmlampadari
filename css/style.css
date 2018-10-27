@@ -235,23 +235,20 @@ body.modal-open {
     background-position: center -98px;   
     background-color: #353436;
     background-size: auto;
-    min-height: 671px;      
-}
-
-.main .container {
-    position: relative;
     min-height: 671px;  
+    position: relative;    
 }
 
 .about {
     width: auto;
-    background-color: rgba(255, 255, 255, 0.85);    
-    float: right;    
-    margin-top: 251px;
+    display: flex; 
+    justify-content: flex-end;  
+    padding-top: 251px;
     min-height: 138px;          
 }
 
 .about__content {    
+    background-color: rgba(255, 255, 255, 0.85);
     box-sizing: content-box;
     max-width: 469px;
     padding-left: 20px;
@@ -344,7 +341,7 @@ body.modal-open {
     position: absolute;
     bottom: 0;
     left: 0;   
-    right: 0; 
+    right: 0;     
 }
 
 .articles {
@@ -356,7 +353,8 @@ body.modal-open {
 .article {
     display: block;
     box-sizing: border-box;
-    width: 400px;      
+    width: 400px;  
+    min-height: 172px;    
     padding-left: 15px;
     padding-right: 20px;
     padding-bottom: 10px;     
