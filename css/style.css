@@ -255,7 +255,7 @@ body.modal-open {
     box-sizing: content-box;
     max-width: 469px;
     padding-left: 20px;
-    padding-right: calc((100vw - 1200px)/2);
+    padding-right: calc((100vw - 1200px)/2 - 8.5px);
 }
 
 .about__content h1 {
@@ -640,8 +640,7 @@ body.modal-open {
 
 
 /* For IE */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){
-    /*.about__content { padding-right: 20px; }*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){    
     .footer-top__section { width: 195px; margin: 0 30px; }    
 }
   
