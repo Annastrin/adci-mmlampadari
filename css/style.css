@@ -356,7 +356,8 @@ body.modal-open {
 .article {
     display: block;
     box-sizing: border-box;
-    width: 400px;      
+    width: 400px;  
+    min-height: 172px;    
     padding-left: 15px;
     padding-right: 20px;
     padding-bottom: 10px;     
