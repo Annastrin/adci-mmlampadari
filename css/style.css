@@ -233,7 +233,7 @@ body.modal-open {
     background-image: url('../img/main-img-full.jpg');
     background-repeat: no-repeat;    
     background-position: center -98px;   
-    background-color: #353436;
+    background-color: #4e4d50;
     background-size: auto;
     min-height: 671px;  
     position: relative;    
@@ -252,7 +252,7 @@ body.modal-open {
     box-sizing: content-box;
     max-width: 469px;
     padding-left: 20px;
-    padding-right: calc((100vw - 1200px)/2 - 8.5px);
+    padding-right: calc((100% - 1200px)/2);
 }
 
 .about__content h1 {
@@ -263,16 +263,17 @@ body.modal-open {
     text-transform: uppercase;
     margin-top: 15px;
     margin-bottom: 23px;
-    padding-left: 7px;
+    padding-left: 9px;
     letter-spacing: -0.3px;
 }  
 
 .about__content p {
     box-sizing: border-box;
     font-size: 18px;
-    padding-left: 7px;
+    padding-left: 9px;
     padding-right: 20px;
     line-height: 1.333;
+    margin-bottom: 20px;
 }  
 
 .buttons {
@@ -347,7 +348,9 @@ body.modal-open {
 .articles {
     display: flex;
     flex-direction: row;
-    justify-content: center;      
+    justify-content: center;   
+    max-width: 1200px;
+    margin: 0 auto;   
 }
 
 .article {
@@ -574,12 +577,7 @@ body.modal-open {
 }
 
 /* For Mozilla */
-@-moz-document url-prefix()
-{
-    .buttons { bottom: 1px }   
-    .about__content { padding-right: calc((100vw - 1200px)/2 - 8.5px); } 
-}
-
+@-moz-document url-prefix() { .buttons { bottom: 1px } }
 
 
 @media only screen and (max-width: 1230px) {
