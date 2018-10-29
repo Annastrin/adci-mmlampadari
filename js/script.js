@@ -1,7 +1,7 @@
 let sliderImages = {
-    'dot1': "url('./img/slider-img1.jpg')",
-    'dot2': "url('./img/main-img-full.jpg')",
-    'dot3': "url('./img/slider-img2.jpg')"
+    'dot1': "url('./img/slider-img1-cutted.jpg')",
+    'dot2': "url('./img/main-img-full-cutted.jpg')",
+    'dot3': "url('./img/slider-img2-cutted.jpg')"
 };
 
 let prevSlider = '#dot2';

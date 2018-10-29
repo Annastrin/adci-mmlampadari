@@ -16,6 +16,7 @@ body.modal-open {
     margin: 0 auto;
 }
 
+h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 
 /*======================================== MODAL WINDOW ========================================*/
 .auth-area {
@@ -51,6 +52,7 @@ body.modal-open {
     min-height: 360px;
     margin: 0 auto;
     padding-top: 10px;
+    padding-bottom: 10px;
     position: relative;
 }
 
@@ -86,12 +88,14 @@ body.modal-open {
 }
 
 .auth-forms form {
+    padding-top: 15px;
     max-width: 190px;
     margin: 0 35px;
 }
 
 .auth-forms h3 {
-    margin: 15px 0;
+    margin-top: 0;
+    margin-bottom: 15px;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 18px;
@@ -112,6 +116,7 @@ body.modal-open {
     background-color: #000;
     color: #fff;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
 .auth-forms input[type=submit]:hover,
@@ -180,9 +185,7 @@ body.modal-open {
     margin-right: 10px;        
 }  
 
-.nav a:last-child {
-    margin-right: 0;
-}
+.nav a:last-child { margin-right: 0; }
 
 .nav a:hover,
 .nav a:active,
@@ -201,7 +204,7 @@ body.modal-open {
     z-index: 10;
     background-color: #353436; 
     box-sizing: border-box; 
-    width: 149px; 
+    width: 150px; 
     padding-top: 30px;    
 }
 
@@ -230,9 +233,9 @@ body.modal-open {
 .main {
     width: 100%;
     display: block;
-    background-image: url('../img/main-img-full.jpg');
+    background-image: url('../img/main-img-full-cutted.jpg');    
     background-repeat: no-repeat;    
-    background-position: center -98px;   
+    background-position: center;   
     background-color: #4e4d50;
     background-size: auto;
     min-height: 671px;  
@@ -251,8 +254,10 @@ body.modal-open {
     background-color: rgba(255, 255, 255, 0.85);
     box-sizing: content-box;
     max-width: 469px;
+    padding-top: 15px;
     padding-left: 20px;
     padding-right: calc((100% - 1200px)/2);
+    padding-bottom: 20px;
 }
 
 .about__content h1 {
@@ -261,7 +266,7 @@ body.modal-open {
     font-style: italic;
     font-size: 30px;
     text-transform: uppercase;
-    margin-top: 15px;
+    margin-top: 0;
     margin-bottom: 23px;
     padding-left: 9px;
     letter-spacing: -0.3px;
@@ -273,7 +278,8 @@ body.modal-open {
     padding-left: 9px;
     padding-right: 20px;
     line-height: 1.333;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
 }  
 
 .buttons {
@@ -342,7 +348,7 @@ body.modal-open {
     position: absolute;
     bottom: 0;
     left: 0;   
-    right: 0;     
+    right: 0;         
 }
 
 .articles {
@@ -357,7 +363,8 @@ body.modal-open {
     display: block;
     box-sizing: border-box;
     width: 400px;  
-    min-height: 172px;    
+    min-height: 172px; 
+    padding-top: 14px;   
     padding-left: 15px;
     padding-right: 20px;
     padding-bottom: 10px;     
@@ -379,9 +386,8 @@ body.modal-open {
 .article h2 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    font-weight: 700;
-    display: block;
-    margin-top: 14px;
+    font-weight: 700;      
+    margin-top: 0;  
     margin-bottom: 1px;
     min-height: 65px; 
     line-height: 1.08;  
@@ -440,7 +446,7 @@ body.modal-open {
     box-sizing: border-box;
     width: 190px;
     margin-right: 50px;
-    margin-left: 8px;   
+    margin-left: 9px;   
     font-weight: 300;
     font-size: 12px;
     line-height: 1.454;
@@ -459,15 +465,16 @@ body.modal-open {
     font-size: 14px;
     line-height: 1.714;
     color: #fff;
+    margin-bottom: 15px;
 }  
 
 .footer-top__section p {    
-    margin-top: 15px;
+    margin-top: 0;
     padding-right: 8px;        
 }
 
 .newsletter-form {
-    margin-top: 20px;    
+    padding-top: 5px;    
 }
 
 .newsletter-form input[type=text],
@@ -498,7 +505,8 @@ body.modal-open {
     height: 10px;   
     border: none;
     outline: none;
-    background-color: #fff;     
+    background-color: #fff;  
+    margin-right: 5px;   
 }
 
 .newsletter-form label {
@@ -537,7 +545,7 @@ body.modal-open {
 }
 
 .contacts {
-    margin-right: 92px;
+    margin-right: 93px;
     padding-top: 2px;
     color: #cccccd;
 }
@@ -577,7 +585,12 @@ body.modal-open {
 }
 
 /* For Mozilla */
-@-moz-document url-prefix() { .buttons { bottom: 1px } }
+@-moz-document url-prefix() { 
+    .buttons { bottom: 1px } 
+    .about__content { padding-bottom: 17px; }    
+    .article { padding-top: 12px; }
+    .footer-top { padding-top: 32px; }
+}
 
 
 @media only screen and (max-width: 1230px) {
