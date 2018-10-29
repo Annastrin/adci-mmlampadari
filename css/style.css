@@ -438,14 +438,13 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
     flex-direction: row;
     justify-content: center;
     padding-top: 34px;
-    padding-bottom: 15px;
-    margin: 0 130px;
+    padding-bottom: 15px;    
 }
 
 .footer-top__section {
     box-sizing: border-box;
-    width: 190px;
-    margin-right: 50px;
+    width: 195px;
+    margin-right: 45px;
     margin-left: 9px;   
     font-weight: 300;
     font-size: 12px;
@@ -470,7 +469,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 
 .footer-top__section p {    
     margin-top: 0;
-    padding-right: 8px;        
+    padding-right: 13px;        
 }
 
 .newsletter-form {
@@ -649,10 +648,6 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 
 
 /* For IE */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){    
-    .footer-top__section { width: 195px; margin: 0 30px; }    
-}
-  
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 900px) {    
     .footer-top {
         flex-direction: column; 
