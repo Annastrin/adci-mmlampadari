@@ -237,17 +237,20 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
     background-repeat: no-repeat;    
     background-position: center;   
     background-color: #4e4d50;
-    background-size: auto;
-    min-height: 671px;  
+    background-size: auto;    
+    height: calc(100vh - 130px);
     position: relative;    
 }
 
 .about {
-    width: auto;
+    width: 100%;
     display: flex; 
-    justify-content: flex-end;  
-    padding-top: 251px;
-    min-height: 138px;          
+    justify-content: flex-end;     
+    min-height: 138px; 
+    position: absolute;
+    top: 50%;  
+    right: 0; 
+    transform: translateY(-50%);      
 }
 
 .about__content {    
