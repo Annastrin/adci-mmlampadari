@@ -1,6 +1,6 @@
 let sliderImages = {
     'dot1': "url('./img/slider-img1-cutted.jpg')",
-    'dot2': "url('./img/main-img-full-cutted.jpg')",
+    'dot2': "url('./img/main-img-full.jpg')",
     'dot3': "url('./img/slider-img2-cutted.jpg')"
 };
 
