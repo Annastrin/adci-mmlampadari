@@ -1,0 +1,11 @@
+.main {
+    width: 100%;
+    display: block;
+    background-image: url('../img/main-img-full-cutted.jpg');    
+    background-repeat: no-repeat;    
+    background-position: center;   
+    background-color: #4e4d50;
+    background-size: auto;    
+    height: calc(100vh - 130px);
+    position: relative;    
+}
