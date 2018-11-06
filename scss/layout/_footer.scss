@@ -53,42 +53,42 @@
     width: inherit;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
-    .contacts {
-        margin-right: 93px;
-        padding-top: 2px;
-        color: #cccccd;
-    
-        span {
-            margin-right: 11px;
-            font-size: 12px;
-            &:last-child {
-                margin-right: 0;
-            }
+    justify-content: space-between;  
+}
+
+.contacts {
+    margin-right: 93px;
+    padding-top: 2px;
+    color: #cccccd;
+
+    span {
+        margin-right: 11px;
+        font-size: 12px;
+        &:last-child {
+            margin-right: 0;
         }
     }
+}
 
-    .social a {
-        margin: 0 3px;
-    }
+.social a {
+    margin: 0 3px;
+}
 
-    .languages {
-        padding-top: 2px;
-    
-        a {    
-            text-decoration: none;
-            color: #fff;
-            font-size: 14px;
-            padding-right: 4px;
-            padding-left: 2px;   
-            &:last-child {
-                padding-right: 0;
-            } 
-            &:hover,
-            &:active {
-                text-decoration: underline;
-            }
+.languages {
+    padding-top: 2px;
+
+    a {    
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        padding-right: 4px;
+        padding-left: 2px;   
+        &:last-child {
+            padding-right: 0;
+        } 
+        &:hover,
+        &:active {
+            text-decoration: underline;
         }
     }
 }

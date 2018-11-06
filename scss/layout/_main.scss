@@ -1,0 +1,99 @@
+.main {
+    width: 100%;
+    display: block;
+    background-image: url('../img/main-img-full.jpg');    
+    background-repeat: no-repeat;    
+    background-position: center;   
+    background-color: #4e4d50;
+    background-size: auto;    
+    height: calc(100vh - 130px);
+    position: relative;          
+} 
+
+.about {
+    width: 100%;
+    display: flex; 
+    justify-content: flex-end;     
+    min-height: 138px; 
+    position: absolute;
+    top: 50%;  
+    right: 0; 
+    transform: translateY(-50%);     
+}
+
+.about__content {    
+    background-color: rgba(255, 255, 255, 0.85);
+    box-sizing: content-box;
+    max-width: 469px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: calc((100% - 1200px)/2);
+    padding-bottom: 20px;
+
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 23px;
+        padding-left: 9px;
+        letter-spacing: -0.3px;
+    }
+
+    p {
+        box-sizing: border-box;
+        font-size: 18px;
+        padding-left: 9px;
+        padding-right: 20px;
+        line-height: 1.333;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.buttons {
+    width: 84px;
+    height: 54px;
+    position: absolute;    
+    bottom: 0px;        
+    left: 50%;
+    margin-left: -42px;
+
+    .slider-buttons {
+        text-align: center;
+        margin-bottom: 8px;
+        height: 18px;
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                background-color: #e2d1a6;
+            }
+        }
+    }
+
+    .show-button {    
+        width: 84px;
+        height: 28px;
+        background-color: #fff;
+        background-image: url('../img/arrow-up.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0;
+    }
+}

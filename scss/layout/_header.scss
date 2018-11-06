@@ -1,15 +1,28 @@
 .header {
     background-color: #353436;
     color: #fff;   
-    width: 100%; 
-    .container {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-top: 24px;
-        padding-bottom: 20px;
+    width: 100%;     
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 20px;    
+}
+
+.auth-area {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    font-size: 14px;
+    cursor: pointer;
+
+    svg {
+        margin-left: 8px;
     }
 }
 
@@ -28,7 +41,7 @@
         &:last-child { margin-right: 0; }
         &:hover,
         &:active,
-        .active {
+        &.active {
             color: #e2d1a6;
             text-shadow: 0 0 3px #e2d1a6;
         }

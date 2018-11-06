@@ -1,0 +1,15 @@
+@import 'vendors/normalize';
+
+@import 'base/base';
+@import 'base/typography';
+
+@import 'layout/modal-window';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+
+@import 'components/forms';
+@import 'components/dropdown';
+@import 'components/articles-block';
+
+@import 'responsive/responsive';

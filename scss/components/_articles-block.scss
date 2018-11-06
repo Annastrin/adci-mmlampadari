@@ -1,0 +1,92 @@
+.articles-block {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;   
+    right: 0;      
+}
+
+.hide-button {
+    width: 88px;
+    height: 29px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-image: url(../img/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -29px;
+    left: 50%;
+    margin-left: -44px;
+    cursor: pointer;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+
+.article {
+    display: block;
+    box-sizing: border-box;
+    width: 400px;  
+    min-height: 172px; 
+    padding-top: 14px;   
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-bottom: 10px;  
+    
+    &.article-1 {
+        background-color: #e2d1a6;
+
+        a {
+            color: #fff;
+        }
+    }
+    &.article-2 {
+        background-color: #fff;
+
+        a {
+            color: #000;
+        }
+    }
+    &.article-3 {
+        background-color: #000;
+        color: #fff;
+
+        a {
+            color: #fff;
+        }
+    }
+
+    h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 700;      
+        margin-top: 0;  
+        margin-bottom: 1px;
+        min-height: 65px; 
+        line-height: 1.08;  
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 14px;
+        line-height: 1.562;
+    }
+
+    a {
+        float: right;
+        text-decoration: none;
+        font-size: 18px;
+        &:hover,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+}
