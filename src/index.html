@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mmlampadari</title>        
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel='stylesheet' href='css/style.bundle.css'>        
+</head>
+<body>
+    <!-- MODAL WINDOW -->
+    <div class="auth-window">
+        <div class="auth-window__content">
+            <button class="close-modal" id="close-modal"></button>                
+            <h2>AREA RISERVATA</h2>
+            <div class="auth-forms">
+                <form action="#" class="sign-in">
+                    <h3>ACCEDI</h3>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="submit" value="ACCEDI">
+                    <br>
+                    <a href="#">Password dimenticata</a>
+                </form>
+                <form action="#" class="sign-up">
+                    <h3>REGISTRATI</h3>
+                    <input type="text" name="fname" placeholder="Nome" required>
+                    <input type="text" name="lname" placeholder="Cognome" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <div class="checkbox-group">
+                        <div class="checkbox-and-label">
+                            <input type="checkbox" name="reg-agreement" id="reg-agreement" required>
+                            <label for="reg-agreement">Acconsento al trattamento dei dati</label>
+                        </div>
+                        <div class="checkbox-and-label">                        
+                            <input type="checkbox" name="subscription" id="subscription">
+                            <label for="subscription">Mi iscriva alla Newsletter</label>
+                        </div>
+                    </div>         
+                    <input type="submit" value="ISCRIVITI">
+                </form>
+            </div>
+        </div>                                
+    </div> 
+    <!-- END of MODAL WINDOW -->   
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="283" height="83" viewBox="0 0 283 83">
+                <image id="LOGO" width="283" height="83" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAARsAAABTCAYAAACvUaOUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAXjUlEQVR42u2debyd07nHf08SsxApQYyJIUKIec6tsW4rvdqaW6Xoh4uWtrRVqoYWLTV1uIZeejugxktxFTVTxEwQNaUliRIJmiYxJN/7x1qv85511jvsfXb2dpL1/XzOZ5+93met9az17ne9a3weU4cBBkkaIWltScMkrSRpRUlDJA2VtLQk8+LvSJosaaqk1yVNkvSypL9K+quZTe10eRKJRBzrfRKNA2wraRtJW0jaUdJSLUh2pqTbJT0o6QEzu7MTZUskEnHa1tgAm0naVdIektZrQ5YvSbpa0o1mdl+7yplIJDoEsCdwE53lTmD/TtdFIpGYBwD7AY91uJEJeR44tNN1k0gkWgCwC3B/p1uVCp4Edu90XSUSiSYAFgf+u9OtSINcCSzX6bpLJBI1AT4PTOx0y9EkU4H9Ol2HiUSiAuDsTrcWLeKCTtdlIpGIACwB/LkXD/cNwOMtbjCeBf7Yi/gPkIZVicTHB2AY8FKTD/Q0YJtcWl/wDU9vuBXYO5fmesCUJtOaAozqdB0nEgs8wChgei8ahp8VpLsVcB4wq4G0LgL+rSC9U3qh43vAFp2u60RigcX3GGb34iEGuLgij6HAd4AXC+JPBk4C1q5I56xe6gmwfafrPJFY4ABWAd5twQM8gxrzIkA/4EvA3T7eY8AhwOI19Z3aAl0BNul03ScSCwzAIsCkFj28AKc2mP/oBuW/2kJdZwErdvoeJBILBMCDLXx4AV6P5LFQk7otFAlr9Z6flzp9DxKJvk6/KgHchG6rJ0uXp+fByEWAc4HP1UkA2Bn4hQLzFMCuklZrsb7DgWtanGYikcgAPtXiHkKexyL5/dpfu5WCU9rA54DrvdyNket3zUOdv9rpe5JI9FUK7dkAC8tZxlt0Hua/tZk9kMvTJP1T0hI+aLykyyQ9ImldSV+StFku/hAzezMXf6SkZ+dxna1gZv+Yx3kkEgsOwBXzsIeQcV0k3/Nqxr00Evd/2qDzXzp9bxKJ+QZg0zY8tABzgJWCvFcCPqwRd5Mg3tLAzDbpvUen71Ei0dcomiC+vI35H50PMLNJNfK/w8weDcK+LmmxNul9SZvySSTmG3o0NrjVoDXbqMMBkbAHKuLcEgk7pI06DwSOaWN+icT8B/Bam4YieY4LdLinQn58IH9IB3Se1el7lUj0JbqtRgE7SbqtQ7qcI+kFSXtKqnMm6XFJF0taWdKxHdL5cDM7v0N5JxJ9irCxeVCt38A3P/Oqma3aaSUSib7AR3M2wDClhqZRViGZokgkajEg9/9Bbc57sqRX1VpHeci57m1nb+NoSXu1Mb9Eom8D/KONk6t/wO1Qnhfl6Aec08ayzOj0vZsfANYGLgEO77Qu8yvAqb6O22r6FvgWcEn2ZYM2PpyzgcoDoC0o4JttLNOn2nnz5kdw/sYAHuq0LvMrdG2WXafN+b5A7qHfuY15m6RaBrB6yYDeJ1GbL7Yxr/mVmf7z1U4rMh/zgv98v835zpa6Jojb6R1yYUlXxy7ghkC1dgEDiwGLFFz7taRBbSzTlm3MK5Hoaxwpaf8BODObmzaRwJOSrpL0jKQ3JX0oZ1tmNUnbSNpFbrI2xi7AJWYWTkqbpGuBNX16RZjcifSdJL2XvwCcI+krJXHfkttLdLekiZLelmt0l5O0jqQ9mqiPEcBgM5vWRD3WAneGbKD/+rqZvV0iu7ykZfzXN83srRbqMVRdNoTeKCszMETSYP/1rfwJ/cSCg5ndKampQ5fXU2O5F2dKdCxwX0laR0fi7V9Tj+9G4h5UIv8ksAewZA3dN6LxU+8NDUWBbXF+t2J/P/Yyw4DfAK/Q/XDqu7hd1p/NpbcYcBrwDM47RMZM4NFYXft465fo8Wsv8wngQpwR+rweM3C+tvbNpdcPOBF4iu7G8Wf7e3BCgR5jvFy015uTG+ZldwRGU8MmNbk5QmApYEtgB2CNAvn+wMbATv630NBiBrC8v7/b416cjcQdjHsmdwa2BlZpMP6avmzb4Br7/LUJvo6Hl8RfDtjM578lTZrExR2MXiwM/GIDD1RTcxPAlyn2yrBBRP72Cj2eiMQZViL/tSb13pX6rmVOazDtA0rSuhHYDni/Rr47+B/3qzVk78HZDMrrUWYg7Tncj25ajbT3xj3IL9aQfYzgAaaisQG+DbxTkN5viQy/fR0/i58QBS6LxH0E2DAX54cRmdnAiZH0l8A1qlf476OB8ZH4U4EjK34PG9Nl3D9kAvD5ivhHEF8UeTRX/r/6sOGR+J8EHirI/xEinkaAQcDTwLW5sBNwL0eAw3zY+cBT2cUq5gLNDLXyig0Hno+k/XREdrMKfcZG4sR6UG/SoLH0Ar2n16ijqxtM9wslaU2ukV/GDBpbeftVoMeYEtlGtkPMoTHHgJcV6HF1pK6uzMU7Ddew7QF8D3jdhz9H0ODQ1XB8GviT//+XwD64l+xtPuwD3IPzM//9CmA/YE/gJ7m8TwzSX9qH3w1snpM7B9jXx/9pLjxqzQD3oGfchDPY/x/AwXTvYX+uIP7vg7z39OW7IBc+CrjG/z88iL9nTu5q4EBgN+BQ4ObctS2CeEN8+OP++2M52enAXj78CQDRZWKzjKgjOJ/QJl6p7wKfBVYvkV2SeIPzxYhskZH1VyKyYyNy0yjpAuL8U+0CHAMcDmxBwZI8sE6NOrpPDUB5YzOvGZzTY0yvU2ueZSJ6XB3U0z4+fBwFwxncAwpBDxY42odPB94GVojEvdTL/N1/7hiRGZHTeblc+EBcI5v9pq8H+kfiD6brQTwpuLYIXb3+6FCcrt7n1Mi1Y/21p4BPRK4vjXvYP6Sr1zU8d32pXNm2Lsj/QH/95SB8WR9+LV29xmMJhn7ALeAamycrfhBnFChwOMVd5gcoGHLhuvzhkOrFiNzXCtI+NiL7eERu3YL8xwJ34t5mIX+jwHQEcFhFPT2vBqCzjc3WOT062dhsFdEjbGyy4eHIkroc5WVuCMK/mctrZEHcvLG2s0ryuM7L5OfJBtI1tPt7xf1ePKfLwFz43j7sjor42RBrvVzYUB/2HrBURfx/5vLPNzY/8GG/qIifeSwZmgtbFjfUz4b7RY3lLeDe5GUTptPN7DuRyJdL+qWkNQribSnpUtwbp5sNY2+/d79Afg3g00HY7xSsNHluDnTZQtKGgcxRZtbDFrHX+wZJ2ym+D2dVSWcSMaTuT3dPLKmrZWjSHU0BE+ROv4/09fVBhfyJcnaaR0v6U4VsIxOeEyV9yuuxm5yN6DJOlzRK0vqSLq2QXaTsIm5+abqkx8zsuRLRrLe7bMH1u4vie2Nt2YraRSV5POU/lw/Cs3t+aFlZzGympDP91yNylxaWu9cXVtRV5iBg9VzYnv7zQjN7tyL+9wrCP5T0nKQrK+JP9J+Dg/C5vg5+ZGblFiPoGvPGOD0if06Db68eY2mfTjgZdllE5o5A5oWIzAWBzBMF5XygQb1/E0njgBL5GcDSqgnVPZvRgfzvS2SvCWRHVqQ9Jidb1bPZOki7zM7z/YHsUhVpx/RoaO7Lx/2Gjxu+iLKezckV8bMJ8KVLZE70Ml/NhQ3MlWUZVYCbQO5RTzXiLU1Xz2KnXHg2l7VjjTQG53QdXiUfxM17wx2ZC182l+bAkvi3AAxQufeEi4JIa0n6RiOKyu1duUnSDkH4DyTdlfv+yUjccepu2+bmiEw4n3RSpLCXq/GNd/vj9gLdnQu7Qe6wZ+zw6EKqeFM3wBtm9mQQVubR4d7g+0y1hrlyb70800vkHwm+LyxpjqT+agG4OYm15fZBbSRnUXIDSVkjEfb+svv0TkXS2TNQ1mvLyjA3cm22mZXVS8Zr/jP6sON6ciPkepFbSVrLl3FUXiz3f+Zp5MGqjM1sGjBJ0kpFMr49GOHz29Lnvbb/i+Wf8Y6ZVfV4NUDF2/onm1k4GXukmmN7YD8z+32u8HfjJpyyih8KbG5m43LxJgTpdJsXwZnFyI/Fp8k1CHmZMZL2aVLv4+Q2/2U6T8P1rtaOyA5QY8OTMmZHwsp2Vi/UgGwjzFXPBrSsQe3XgGxtgC9L+o66P3SSGwLcL+fu5wIV7xqfq3KyRgk1R1VjlpEd2u3Wg8Itqpyu+O/0Lbkh8mhJXwiurSRJZvavmvm/pUhjg5sHOlVumBzymlzd7yFp84J0a73c+sm9eWK8EgnbpWahZkiaFITFxoxhlzncLBg2NhOD72OC79eYWViecCg4WV1j9CrWI9iXIqnIFe8cle96boT+RFY1yuRblG+INZh2y/XAeWT9rVxDc5OczeqRkhY3s4XMbDszu8jrWjRnVnXwl5pyRdRt3DP9PjqbBIyQe4nuI/f7Pk3S1nL+yczMljWzUyRNiaRXt5HJ6NH4+5fxeLmGZoKkE+R6NUN8/quY2ZkVedW67/0Un4SVulrhPHXmJO6Rm8RaTdJhufB1gfUD2XCPTdjqjg8KGfoIXzn4/nhQkcvIHZ3I+J7XazUVnM+KlDe8QUVb7j8sqctEEwA7yHnNeF3S6mY21sx+a2YTzGxWTi5bIWlVY98oS1FjJ7OkbEfv5FzYTXI94mPMbJiZHW9mD0QcIcZ6iU/58tc9xR2z83SV/zzYzEaa2Y/M7KHI0ZJe91L7qbjFis3lVBn5nitpbzN7y8zmmNkF6j7LHc7b/C343m2fgJnNkOv6ZYTd1XD1IVx+zO9OfsrMfmxmH5rZDDPbU9Xdv9nqeUK2aCJsZo30Eo2RrVAea2Z/K5Fb3X92ov6z38d6NWQzX2fjpI/Ou60h6RUzO6si7lqRsIf95w4VcQVsp6AHBmwkt7p2h5lVuSdq6NhEjH6K92Ck+LL2FRXp/dPMwt5Hfp4lbBzCH8cSPZPsNukXvrnCt0nYcObPpcT2QVRN6t1jZuF4f90C2XfMLPVsWkt2f9+okDvKf3bCkFn2Gz6lhmwmk+1pyZaR3y6LhDvDlS2g5J+B6/1nHTdG346EZSOJSWURfQ8za2zmqEn6KT4WlKSV6XmI7DSV28IYHwmrmsmuosxsaCPpDYuEPVwR51vdMutaDYkxVYlWk+1YPbhIADhCXWZZB1am2HoWlXsm/h0ofOiBb8qtzD5hZtmq3UT/OZrAM2wu3jLq7kfto/lGM7tXbiVqNFC0j0Z+uf4z6jkyyVax9ipa9gdWk3R7Lig/BGxojqufpEdLrnfbTWtm78hNXsWWYWeq+2Yl4baX5zfrhROzYU8mtnyWHyuGqz1hTybcoJjfXj2SnrssD1P8rfm2pO0jXfeDVNz4FTXaRZTdqNiqVpkxsHCCrsquc7+C/2PphmmV6RFeq5pgjumRT+MP/nN34Bf+h59t8d8UuEqul3Co3BL9zsBRQPZC6B98FlFnFbEorUXlNtydK+lCr+c6+KMvuLN1Z0s6W65R+uhcn18u/qUv++O4U+IL+XhDgQPlnpnn1fUs/hDYNZf/HnLD/dOAn/teUHb6fh3gAkm/klttykYm5vOfKjfNsYikh3Enxfv7+KsBR8k1iH+QlA3zzqNrF3XW8aiqPzcxTvlGtbnkztFk4M44nQzchTvDdHH2Qwjk9g3S267i+qnB9WXofrRh8+D6sUH8Q4PrQ4Pr34roOBh3KvVB3Kno0wvKbJT7Ej+nxg+2rOx5ZoerUcDvSuR/GMiOopwdcrI7VMiu0oAevwtkV2lCj9uCNHai/CDs173cybmw433Y9/3371fci4z+JTJne5kjcmHZpr6X/fefluj5LMVHJm4oifeMl1kyVw+hDaeRONMiRZzt5W7139fKxV2EcisLd+Wepez3/54Py45glG4twJ8mN2Bb9dwUluchM2vKEh3uvEj2Y33TzEL7Gieo+1j3MD+pnF3/pLpv/NvNzP6Yu763ut5+kvRTM/t2kMcr6ppAfF/SoPxKRgNluVZS2TH/3c3s2gbSW1ZuUjG8USb3pnrYzMjJrym3+haOmftLesnMXs3JLi43GWnqOdQ0ua78u152KbnjHjG5uZLGmVl+qbZMj9fM7MWc7MJyezP61dRjU0lTwqMF/trBcuZrV5Ubst4v6b/8cYNMbn25eZBnzGwqbmiyjqQJebnIvdjG63hfvs4DmdXk5gDHZytFuF2z78rN1w3yYSMkHS63jWNRuR7XFWZ2XcXvYUc587KjvS4TfLzrczKD5BY93ols+hTuVPhecvOKs+T2iJ2f9dCBjeUMnz1oZrODuGN93FH+vj8r6TdmdntOZgW5aYTpZva0b5y3kfSemRXajgZGSfpE1nuYSzmXq0FwJ0HzXBKRuTeQWTe4HrrV/WZwfQju1O1Hb49IHqF9kio/4rGynEc1QxtNN9G3oatnkywQ1gVnAKeKeyk5eZtLawhxsxUjArnVg+uxc0/nBjIXR2QeCWQ2CK4vGdHlPqDStxRu3FrWxc2Y2Ol7mGg/qbFpAuCUGg9UxkU4Yz95WyQDcOPG7xK3pnZOJM8fhOlGZELLYa/Tcy7jzEDm3Eg6x0R0eg83zl+f3Glt3KG3MbiJvg+pxzVKLHCkxqYJgK0aaGwyZuDMFY4HJpXIxcaWC0UapdAK2MrEh3fbBnIjgusfErHtgbOpW8QUX45n6Trd2gjNnr1K9GHostTX7JmqBQ+cgeeZTTxkVbxIZP0eOCuQeyQiU2Su9IyIbNiQXFlQzkdoPR9Q4FImMX+DW40ZB9zSaV36FPS0C9NbbgOWiOSzSUR2p4jccwXpTicwUkXcZvFnCsp5dYvLebsSiUR9aJ0L3km4zUCxPJakpxHtWyNyYyvyODgS5/JAZg4FbjBwNlXreAGow2eVSCQao8kHcBbOitiNOGvwRUapF8FbWQ8ahOUjsk9U5PlaJM4SdLezCm4uZogKwG2su8aXu5lhZB2DSYlEIoT6PqQm4zwTDMdtTqtKd1Wc9feQz0dk96upQ8zweWw37OvkjESX6DgY53tqO+DlmjqcXJVuIpEoAPhXxQM2h4hjuZL0di9I87iI7ACKHZHFiLnmOLxA9sAGdF6F7l4li0gTw4lEswBHVjxg79dMZ0OKjWP/pCDOjQ00NFDgq4n4vhpwQ6atVIMajd55nb5XiUSfB+fQq4yiCeCVcN71Li2Je2xB3OMabGgyzixI75CSONcCXyJyeNTH/UqNfFOvJpFogKgpAtyBrv+tiHuhnJ3ihSWtKGdJbHsVH+efIulQM7shvEDPA5WN8p9m1sPvDs6+6kVyh/GKuFfSM16/9+QMCn29Ir9jalhWSyQSdaDYyXgznI87sRrLZ7cW5XFAQfqGO9Iwp5fpZ7yqRCLROnBucu/pxUP5NvArYMOSPA7sRfoxjizJa02c4/gpvUh/HD2NticSiVYAbA2cijOwU3YG6gPc+aJLgUOJGKAK0j29xQ1Nxs8r8l0UOAg3ef0E5ftrXsd57jyDnKGnRCLROFXmI7uBO3G9vpwBo8FyRn5myZkufNrMJtdIYwNJP1PcA2areELS18ys0s0pbp/QhnKeHZaQMxz0tpyB9PF5w1GJRKIPgDshe9I86s0UcTYFhqQTicR8Bm6u5HjgjTY3NBmzccPANNeSSHSQhoZRdcF56NtCzl3vvp0uZI7rJP2fpL+Y2TOdViaRWJBodM5mkJyzqyly/mMyx/MDJa0g55tpY7k5kI87z8i5sXnFl+VdOUPjJuclcDVJZ3l3F4lEopcMaFB+ppyHgp83GO/jyHoqd5l6huJ+rBKJRBM0NYwCdpF0c7Px+wB7mdlVvU8mkUhkNN1Y4HzB3KAun0zzA2/I+aZ6sNcpJRKJbjTkqzePmY2X23NzU6cL0SLulDQqNTSJxLyh6cZGksxshpmNlXR8pwvSS04zsx3MLLnkSCQ+7uBsGP+5+e0wHWEcgWuYRCLRR8BZypva6VakgvcpsKuTSCT6EDh7vqdQbWK0E5xFgdGsRCLRRwFWxB1V+HuHG5hpuCMLa3W6ThKJxDwEWBjnueGqNjcyN+LMSQzqdB0kEgs6bd+UBwyXMy8xRtLOklZuYfL/kHSLpPsl3WNmE9pdvkQiEaejO4CBAZI2krSupJFy55GGydkMrlqWf17uXNNESRPkzjo9ZWazOlmmRCIR5/8BhM8xYooqupkAAAAASUVORK5CYII="/>
+              </svg></a>
+            <div class="auth-area">AREA RISERVATA
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9" height="13" viewBox="0 0 9 13">
+                    <image id="Oggetto_vettoriale_avanzato" data-name="Oggetto vettoriale avanzato" width="9" height="13" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAANCAMAAABM3rQ0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAZlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACVIU+6AAAAIHRSTlMAV9z0Tdsw2sY7PO4B8L640M66sVR+EzGWm9HS1Oy78yDbNOMAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAVElEQVQI1y3KSQ6AIBBE0RIRB1DbeVbuf0oLQif18hcNIFO5ysDThYEpNauqSVMR64izpA0v0S4W7UWGUUQmeO9nLDTUii3VjiOV4Ex14Q71kJf7fhDDBwh/KueBAAAAAElFTkSuQmCC"/>
+                  </svg>
+            </div>
+            <nav class="nav">
+                <a href="#" class="active">HOME</a>                
+                <div class="dropdown">
+                    <a href="#">AZIENDA</a>
+                    <div class="dropdown-content">
+                        <a href="#">STORIA</a>
+                        <a href="#" class="active">MM&nbsp;DESIGN</a>
+                        <a href="#">DESIGNER</a>
+                        <a href="#">CERTIFICAZIONI</a>
+                    </div>
+                </div>
+                <a href="#">COLLEZIONI</a>
+                <a href="#">NEWS</a>
+                <a href="#">CONTATTI</a>
+            </nav>            
+        </div>
+    </header>
+    <!-- END of HEADER -->
+
+    <!-- MAIN -->
+    <main class="main">  
+        <div class="about">
+            <div class="about__content">
+                <h1>Lampadari contemporanei</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+            </div> 
+        </div>             
+        <div class="buttons">
+            <div class="slider-buttons">
+                <span class="dot" id="dot1"></span> 
+                <span class="dot active" id="dot2"></span> 
+                <span class="dot" id="dot3"></span>
+            </div>
+            <button class="show-button"></button>
+        </div> 
+        <div class="articles-block">
+            <button class="hide-button"></button>
+            <div class="articles">                
+                <article class="article article-1">
+                    <h2>Stai pensando ad un progetto?</h2>                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>                                        
+                    <a href="#">Approfondisci</a>
+                </article>
+                <article class="article article-2">
+                    <h2>Vi aspettiamo alla fiera Euroluce</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                    <a href="#">Approfondisci</a>
+                </article>
+                <article class="article article-3">
+                    <h2>Scopri la nuova collezione</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+                    <a href="#">Approfondisci</a>
+                </article>
+            </div>
+        </div>                    
+    </main>
+    <!-- END of MAIN -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <section class="footer-top__section">
+                    <h3>Lampadari made in italy</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                </section>
+                <section class="footer-top__section">
+                    <h3>lampadari artigianali</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                </section>
+                <section class="footer-top__section">
+                    <h3>45 anni di esperienza</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                </section>
+                <section class="footer-top__section">
+                    <h3>NEWSLETTER</h3>
+                    <form class="newsletter-form" action="#">
+                        <input type="text" name="name" placeholder="Nome e Cognome" required>
+                        <input type="email" name="email" placeholder="Email" required>                        
+                        <div class="newsletter-form__checkbox-and-label">
+                            <input type="checkbox" name="subscr-agreement" id="subscr-agreement" required>
+                            <label for="subscr-agreement">Acconsento al trattamento dei dati</label>
+                        </div>                        
+                        <input type="submit" value="ISCRIVITI">
+                    </form>
+                </section>
+            </div>
+            <div class="footer-bottom">
+                <div class="contacts">
+                    <span>MMLAMPADARI&nbsp;srl</span>          
+                    <span>Via&nbsp;Feltrina&nbsp;00</span>
+                    <span>31111&nbsp;Pederobba&nbsp;&nbsp;(TV)</span>
+                    <span>0423.123456</span>
+                    <span>info@mmlampadari.mm</span>
+                    <span>P.IVA&nbsp;04123456789</span>        
+                </div>
+                <div class="social">
+                    <a href="#"><img src="./img/social-facebook.png" alt="facebook" width="18" height="18" title="facebook"></a>
+                    <a href="#"><img src="./img/social-instagram.png" alt="instagram" width="19" height="18" title="instagram"></a>
+                    <a href="#"><img src="./img/social-pinterest.png" alt="pinterest" width="13" height="18" title="pinterest"></a>
+                </div>
+                <div class="languages">
+                    <a href="#">ITA</a>&#124; 
+                    <a href="#">ENG</a>&#124; 
+                    <a href="#">DEU</a>&#124; 
+                    <a href="#">РУС</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END of FOOTER -->
+    <script type="text/javascript" src="js/bundle.js"></script>
+</body>
+</html>
